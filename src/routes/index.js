@@ -1,4 +1,4 @@
-const Foo = () => import(/* webpackChunkName: "foo" */'@/views/foo');
+const Home = () => import(/* webpackChunkName: "home" */'@/views/Home');
 const Bar = () => import(/* webpackChunkName: "bar" */'@/views/bar');
 
 const routes = [
@@ -9,13 +9,13 @@ const routes = [
     {
         path: '/',
         redirect: {
-            name: "Foo"
+            name: "Home"
         }
     },
     {
-        path: '/foo',
-        name: "Foo",
-        component: Foo,
+        path: '/home',
+        name: "Home",
+        component: Home,
     },
     {
         path: '/bar',
