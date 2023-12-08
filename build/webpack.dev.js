@@ -1,8 +1,7 @@
-const webpack = require('webpack');
 const common = require('./webpack.common.js');
 const { merge } = require('webpack-merge');
 const { SERVER_HOST, SERVER_PORT } = require('./constant.js');
-const { rootResolve, devMode } = require('./utils.js');
+const { rootResolve } = require('./utils.js');
 
 module.exports = merge(common, {
   mode: 'development',

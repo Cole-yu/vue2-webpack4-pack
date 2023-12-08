@@ -44,7 +44,6 @@ module.exports = {
       {
         test: /\.less$/,
         use: [
-          // 'style-loader'
           {
             loader: MiniCssExtractPlugin.loader,
             options: {

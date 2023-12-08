@@ -1,18 +1,33 @@
-# webpack 4
+# 项目模板
+
+### 简介
+```
+开箱即用的 Vue2 + Webpack4 + less + ES6 + npm 项目模板
+```
+
+### 使用
+安装依赖：
 ```
 npm install
 ```
-开发环境下，执行
+
+开发环境：
 ```
-npm run dev 
+npm run dev
 ```
-生产环境下，执行
+
+生产环境：
+
 ```
 npm run build
 ```
-**如想忽略ESLint的检查，只需在要忽略的文件头部添加`/* eslint-disable */`**  
-**如想忽略stylelint的检查，只需在要忽略的CSS文件头部添加`/* stylelint-disable */`**
 
-#### 相关文章分析
-[如何利用webpack来提升前端开发效率（一）？](https://juejin.im/post/5c3dbf4b6fb9a04a027a9c41)   
-[如何利用webpack来提升前端开发效率（二）？](https://juejin.im/post/5c41a4866fb9a049f7467d73)
+### Webpack 版本
+- `webpack`：4.47.0
+- `webpack-cli`：3.3.12
+
+### 功能版本
+- `vue`：2.7.15
+- `vuex`：3.6.2
+- `axios`：1.6.2
+- ...
