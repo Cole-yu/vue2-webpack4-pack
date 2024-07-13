@@ -1,5 +1,5 @@
-const Home = () => import(/* webpackChunkName: "home" */'@/views/Home');
-const Bar = () => import(/* webpackChunkName: "bar" */'@/views/Bar');
+const Home = () => import(/* webpackChunkName: "Home" */'@/views/Home');
+const Bar = () => import(/* webpackChunkName: "Bar" */'@/views/Bar');
 
 const routes = [
     {
@@ -24,7 +24,7 @@ const routes = [
             {
                 path: '',
                 name: 'Baz',
-                component: ()=>import(/* webpackChunkName: "baz" */'@/views/Baz')
+                component: ()=>import(/* webpackChunkName: "Baz" */'@/views/Baz')
             },
         ]
     },

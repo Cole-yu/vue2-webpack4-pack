@@ -1,4 +1,5 @@
 import BridgeUtils from '@/utils/bridgeUtils';
+import PublicUtils from '@/utils/publicUtils';
 
 export default {
   components: {},
@@ -15,6 +16,14 @@ export default {
       loading: true,
     }
   },
-  methods: {},
+  methods: {
+    backHandle() {
+      this.$router.go(-1);
+    },
+    setDocumentTitle(title) {
+      this.title = title;
+      PublicUtils.setDocumentTitle(title);
+    }
+  },
   filters: {},
 };

@@ -118,12 +118,34 @@ function getParameterUrl(name) {
     }
 }
 
+/**
+ * 解决IOS内嵌h5页面动态改变document.title失效问题
+ */
+function setDocumentTitle(title) {
+    document.title = title;
+    const mobile = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(mobile)) {
+        const iframe = document.createElement('iframe');
+        iframe.src = 'title.html';
+        iframe.style.visibility = 'hidden';
+        iframe.style.width = '1px';
+        iframe.style.height = '1px';
+        iframe.onload = () => {
+            setTimeout(() => {
+                document.body.removeChild(iframe);
+            }, 10);
+        };
+        document.body.appendChild(iframe);
+    }
+}
+
 export {
     debounce,
     throttle,
     deepClone,
     StorageHelper,
     getParameterUrl,
+    setDocumentTitle,
 }
 
 export default {
@@ -132,4 +154,5 @@ export default {
     deepClone,
     StorageHelper,
     getParameterUrl,
+    setDocumentTitle,
 };

@@ -1,34 +1,45 @@
 <template>
+  <Framework :show="showHeader">
+    <!-- 头部 -->
+    <template v-slot:header-default>{{ title }}</template>
+    <template v-slot:header-left>
+      <BackIcon @backEmit="backHandle" />
+    </template>
     <div class="home-wrap">
-        <h1>Home</h1>
-        <div class="img-wrap">
-            <img :src="img" alt="test">
-        </div>
+      Home
     </div>
+  </Framework>
 </template>
 
 <script>
-import img from '@/images/bread.png';
+import Framework from "@/components/Framework";
+import BackIcon from "@/components/BackIcon";
+import baseMixin from "@/mixins/baseMixin";
 export default {
-    data(){
-        return {
-            img: img,
-        }
-    }
-}
+  name: "Home",
+  mixins: [baseMixin],
+  components: {
+    Framework,
+    BackIcon,
+  },
+  props: {},
+  data() {
+    return {
+      // showHeader: false,
+    };
+  },
+  created() {
+    this.setDocumentTitle("首页");
+  },
+  mounted() {},
+  methods: {},
+};
 </script>
 
 <style lang="less" scoped>
-.home-wrap{
-    font-size: 0.24rem;
-    color: #333;
-    .img-wrap{
-        width: 4rem;
-        height: 4rem;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-    }
+@import "@/styles/customer.less";
+.home-wrap {
+  width: 100%;
+  height: 100%;
 }
 </style>
