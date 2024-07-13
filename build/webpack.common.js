@@ -165,8 +165,8 @@ module.exports = {
     ],
     splitChunks: {
       // 实际拆分条件优先级： maxSize < minSize
-      minSize: 20*1024, // 限制拆分包的最小值，达到这个值，才能够拆出新包
-      maxSize: 50*1024, // 单位:字节 约等于40kb，生成的块大于40KB的chunk将拆分成较小部分，增加请求数量以实现更好的缓存
+      minSize: 80*1024, // 限制拆分包的最小值，达到这个值，才能够拆出新包
+      maxSize: 160*1024, // 单位:字节 约等于160kb，生成的块大于160KB的chunk将拆分成较小部分，增加请求数量以实现更好的缓存
       minChunks: 1, // 引入次数大于等于该值时，才会进行分包
       cacheGroups: {
         vendor: {

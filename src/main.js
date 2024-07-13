@@ -10,6 +10,8 @@ import PublicUtils from '@/utils/publicUtils';
 // import VConsole from 'vconsole';
 // const vConsole = new VConsole();
 
+// console.log('process.env', process.env);
+
 let dev = PublicUtils.getParameterUrl("dev") === "true";
 store.dispatch("setDev", dev);
 
@@ -92,8 +94,6 @@ function setInterceptorsResponse() {
     return Promise.reject(error);
   });
 }
-
-// console.log('process.env', process.env);
 
 // 初始化页面
 function initApp(userInfo) {
