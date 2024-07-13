@@ -194,5 +194,6 @@ module.exports = {
     "vue": 'Vue',
     "vuex": "Vuex",
     "axios": 'axios',
+    "vconsole" :"VConsole"
   },
 };
