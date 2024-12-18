@@ -45,13 +45,10 @@ function setResize() {
 			if (!clientWidth) {
 				return
       }
-      var value = 100 * (clientWidth / 750);
-			if (value > 55.2) {
-				value = 55.2;
-			}
+      var value = Math.min(100 * (clientWidth / 750), 100);
       docEl.style.fontSize = value + "px";
 			window.fontSize = value;
-			document.body.style.visibility = "visible"
+			document.body.style.visibility = "visible";
 		};
 	if (!doc.addEventListener) {
 		return
