@@ -46,8 +46,11 @@ function setResize() {
 				return
       }
       var value = 100 * (clientWidth / 750);
+			if (value > 55.2) {
+				value = 55.2;
+			}
       docEl.style.fontSize = value + "px";
-
+			window.fontSize = value;
 			document.body.style.visibility = "visible"
 		};
 	if (!doc.addEventListener) {
