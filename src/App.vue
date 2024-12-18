@@ -17,7 +17,8 @@ export default {
 
 <style lang="less">
 .app-wrap {
-  width: 100%;
+  width: 7.5rem;
   height: 100%;
+  margin: 0 auto;
 }
 </style>
